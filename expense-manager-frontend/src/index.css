@@ -1,3 +1,30 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #FFEAD3;
+}
+
 h1 {
   color: green;
+  text-align: center;
 }
+
+form {
+  text-align: center;
+}
+
+form input {
+  padding: 5px;
+  margin: 10px;
+}
+
+form ::placeholder {
+  text-align: center;
+}
+
+.task {
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.2);
+  padding: 2px 10px;
+}
+
