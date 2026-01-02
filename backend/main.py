@@ -37,7 +37,8 @@ if not DATABASE_URL:
     raise RuntimeError("DATABASE_URL not set")
 
 # Create engine
-engine = create_engine(DATABASE_URL, echo=True)
+# echo=True ? Logs every SQL Statement, making the process slow
+engine = create_engine(DATABASE_URL, echo=False)
 
 def create_db_and_tables():
     SQLModel.metadata.create_all(engine)
