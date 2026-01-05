@@ -8,7 +8,7 @@ from sqlmodel import Field, Session, SQLModel, create_engine, select
 from sqlalchemy import func
 from dotenv import load_dotenv
 
-# load_dotenv()
+load_dotenv()
 
 class TaskBase(SQLModel):
     name: str
