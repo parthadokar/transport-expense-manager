@@ -8,7 +8,7 @@ from sqlmodel import Field, Session, SQLModel, create_engine, select
 from sqlalchemy import func
 from dotenv import load_dotenv
 
-load_dotenv()
+# load_dotenv()
 
 class TaskBase(SQLModel):
     name: str
@@ -56,7 +56,10 @@ app = FastAPI(lifespan=lifespan)
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost", "http://localhost:5173"],
+   allow_origins=[
+    "http://localhost:5173",
+    "https://transport-expense-manager.vercel.app"
+],
     allow_methods=["*"],
     allow_headers=["*"],
 )
